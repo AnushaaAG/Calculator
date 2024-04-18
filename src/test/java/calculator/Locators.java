@@ -58,6 +58,13 @@ public class Locators {
 	@FindBy(id = "display")
 	WebElement result;
 	
+	@FindBy(xpath = "//input[@value='C']")
+	WebElement reset;
+	
+	@FindBy(xpath = "//input[@value='.']")
+	WebElement dot;
+	
+	
 	
 	public Locators(WebDriver driver) {
 		this.driver = driver;
@@ -68,7 +75,15 @@ public class Locators {
 		String getheadertext = driver.getTitle();
 		assertEquals("Calculator", getheadertext);
 	}
+	public void clearResult() {
+		reset.click();
+	}
+	public int getResult() {
+		return Integer.parseInt(result.getText());
+	}
 	
-
+	public Double getDoubleResult() {
+		return Double.parseDouble(result.getText());
+	}
 
 }

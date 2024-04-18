@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Testing Google Apps]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression(failed)">
+    <classes>
+      <class name="calculator.CalculatorTests">
+        <methods>
+          <include name="initialize"/>
+          <include name="testNumberButtonsDisplay"/>
+          <include name="tearDown"/>
+          <include name="initDriver"/>
+          <include name="testcalculator_Integration2Series"/>
+          <include name="testcalculator_addMultiplyIntegration"/>
+          <include name="testcalculator_Integration1"/>
+          <include name="testcalculator_multiply"/>
+          <include name="testcalculator_FloatDivide"/>
+        </methods>
+      </class> <!-- calculator.CalculatorTests -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Testing Google Apps] -->

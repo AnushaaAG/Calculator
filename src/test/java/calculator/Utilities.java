@@ -7,7 +7,8 @@ public class Utilities {
 	
 	WebDriver driver;
 	
-	public String operation(WebElement a, WebElement b,WebElement operator,WebElement resultOperator,WebElement result) {
+	public String basicOperation(WebElement a, WebElement b,WebElement operator,WebElement resultOperator,WebElement result) {
+		
 		a.click();
 		operator.click();
 		b.click();
