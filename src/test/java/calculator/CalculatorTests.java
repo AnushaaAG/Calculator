@@ -103,7 +103,18 @@ public class CalculatorTests {
 		assertEquals(value,6);
 		
 	}
-	
+	@Test
+	public void testcalculator_AddZero() {
+		locators.clearResult();
+		//perform operation
+		int value = Integer.parseInt(utilities.basicOperation(locators.Zero, locators.Zero,locators.Add,locators.equalsTo,locators.result));
+		//Clear result for fresh operation
+		locators.clearResult();
+		//Assert the result
+		assertEquals(value,0);
+		
+	}
+	@Test
 	public void testcalculator_AddFloat() {
 		locators.clearResult();
 		locators.Eight.click();
@@ -135,6 +146,26 @@ public class CalculatorTests {
 		
 	}
 	@Test
+	public void testcalculator_zerosubtractIntResult() {
+
+		locators.clearResult();
+		int value = Integer.parseInt(utilities.basicOperation(locators.Zero, locators.Zero,locators.Subtract,locators.equalsTo,locators.result));
+		//Clear result for fresh operation
+		locators.clearResult();
+		assertEquals(value,0);
+		
+	}
+	@Test
+	public void testcalculator_zerosubtractStringResult() {
+
+		locators.clearResult();
+		String value = utilities.basicOperation(locators.Zero, locators.Zero,locators.Subtract,locators.equalsTo,locators.result);
+		//Clear result for fresh operation
+		locators.clearResult();
+		assertEquals(value,"0");
+		
+	}
+	@Test
 	public void testcalculator_multiply() {
 
 		locators.clearResult();
@@ -144,6 +175,15 @@ public class CalculatorTests {
 		assertEquals(value, 24);
 	}
 	@Test
+	public void testcalculator_Zeromultiply() {
+
+		locators.clearResult();
+		int value = Integer.parseInt(utilities.basicOperation(locators.Zero, locators.Zero,locators.Multiply,locators.equalsTo,locators.result));
+		//Clear result for fresh operation
+		locators.clearResult();
+		assertEquals(value, 0);
+	}
+	@Test
 	public void testcalculator_divide() {
 
 		locators.clearResult();
@@ -151,6 +191,16 @@ public class CalculatorTests {
 		//Clear result for fresh operation
 		locators.clearResult();
 		assertEquals(value,2.0);
+	}
+	
+	@Test
+	public void testcalculator_divideZero() {
+
+		locators.clearResult();
+		String value = utilities.basicOperation(locators.Six, locators.Zero,locators.Division,locators.equalsTo,locators.result);
+		//Clear result for fresh operation
+		locators.clearResult();
+		assertEquals(value,"Error");
 	}
 	
 	@Test

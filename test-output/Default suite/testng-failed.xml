@@ -5,10 +5,10 @@
     <classes>
       <class name="calculator.CalculatorTests">
         <methods>
+          <include name="testcalculator_zerosubtractStringResult"/>
           <include name="initialize"/>
           <include name="tearDown"/>
           <include name="initDriver"/>
-          <include name="testcalculator_FloatDivide"/>
         </methods>
       </class> <!-- calculator.CalculatorTests -->
     </classes>
